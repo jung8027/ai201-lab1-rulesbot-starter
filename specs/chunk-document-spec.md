@@ -116,11 +116,17 @@ handle these cases better, at the cost of more implementation complexity.
 **Actual chunk count produced across all 8 rule books:**
 
 ```
-[your answer here]
+149 chunks total:
+  Catan 18, Clue 21, Codenames 16, Monopoly 23, Pandemic 18,
+  Risk 20, Ticket To Ride 16, Uno 17
 ```
 
 **One thing that surprised you or didn't match your expectations:**
 
 ```
-[your answer here]
+The counts track document length closely (Monopoly longest at 23, Codenames/
+Ticket to Ride shortest at 16) — the 300/50 sliding window is uniform enough
+that chunk count is basically a proxy for character count. The character-based
+split does cut mid-sentence as the spec warns, but with 50-char overlap and
+300-char windows, retrieval still surfaces the right rule intact in practice.
 ```
